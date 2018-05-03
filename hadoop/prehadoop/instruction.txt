@@ -1,0 +1,4 @@
+- add values to configuration files in files/hadoop
+- po pobraniu javy najlepiej utworzyć z nią plik archive.zip, z którego będzie instalowna przez skrypt copydebs.shs
+- wygenerowac klucze i uzupelnic id_rsa i id_rsa.pobraniu
+- demo.sh odpala demo, skrypt należy odpalić w sposób: sh demo.sh
