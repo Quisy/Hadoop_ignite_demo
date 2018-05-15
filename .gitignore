@@ -10,3 +10,11 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+hadoop/prehadoop/files/resources/hadoop-2\.6\.4\.tar\.gz
+
+hadoop/prehadoop/\.vagrant/machines/hadoop-slave2/virtualbox/
+
+hadoop/prehadoop/ubuntu-xenial-16\.04-cloudimg-console\.log
+
+hadoop/prehadoop/files/resources/monitoring\.tar

@@ -1,14 +1,14 @@
 <configuration>
-	<property>
+	<!-- <property>
 		<name>dfs.webhdfs.enabled</name>
 		<value></value>
 	</property>
 	<property>
 		<name>dfs.namenode.rpc-address</name>
 		<value></value>
-	</property>
+	</property> -->
     <property>
 	    <name>dfs.replication</name>
-	    <value></value>
+	    <value>1</value>
     </property>
 </configuration>

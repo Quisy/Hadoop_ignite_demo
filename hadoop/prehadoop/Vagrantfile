@@ -7,8 +7,8 @@ boxes = [
 :eth1 => "192.168.5.10",
 :mem => "1000",
 :cpu => "2",
-# :box => "ubuntu/xenial64",
-:box => "ubuntu/trusty64",
+:box => "ubuntu/xenial64",
+#:box => "ubuntu/trusty64",
 :files => [
 {
     :src => "files/system/scripts",
@@ -38,7 +38,7 @@ boxes = [
 {
 :name => "hadoop-slave1",
 :eth1 => "192.168.5.11",
-:mem => "4000",
+:mem => "1500",
 :cpu => "2",
 :box => "ubuntu/xenial64",
 :files => [
@@ -57,30 +57,6 @@ boxes = [
 {
 :name => "grafana",
 :guest => "3000", :host => "3001"}
-]
-},
-{
-:name => "hadoop-slave2",
-:eth1 => "192.168.5.12",
-:mem => "4000",
-:cpu => "2",
-:box => "ubuntu/xenial64",
-:files => [
-{
-    :src => "files/system/scripts",
-    :dst => "/home/vagrant/scripts"}
-],
-:shells => [
-    "shells/system/copydebs.sh",
-    "shells/system/generic.sh",
-    "shells/system/ssh.sh",
-    "shells/system/gethadoopslaves.sh",
-    "shells/system/monitoring.sh"
-],
-:ports_forward => [
-{
-:name => "grafana",
-:guest => "3000", :host => "3002"}
 ]
 }
 ]

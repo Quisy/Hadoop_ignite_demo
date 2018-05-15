@@ -1,6 +1,6 @@
 <configuration>
     <property>
         <name>fs.defaultFS</name>
-        <value></value>
+        <value>hdfs://hadoop-master/</value>
     </property>
 </configuration>
