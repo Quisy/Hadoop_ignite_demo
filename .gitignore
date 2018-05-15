@@ -18,3 +18,8 @@ hadoop/prehadoop/\.vagrant/machines/hadoop-slave2/virtualbox/
 hadoop/prehadoop/ubuntu-xenial-16\.04-cloudimg-console\.log
 
 hadoop/prehadoop/files/resources/monitoring\.tar
+
+hadoop/prehadoop/\.vagrant/machines/hadoop-master/virtualbox/
+
+
+hadoop/prehadoop/\.vagrant/machines/hadoop-slave1/virtualbox/
