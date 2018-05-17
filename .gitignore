@@ -25,3 +25,7 @@ hadoop/prehadoop/\.vagrant/machines/hadoop-master/virtualbox/
 hadoop/prehadoop/\.vagrant/machines/hadoop-slave1/virtualbox/
 
 hadoop/hadoop/mapreduce/\.idea/libraries/
+
+hadoop/hadoop/mapreduce/\.idea/artifacts/
+
+hadoop/hadoop/mapreduce/output/
