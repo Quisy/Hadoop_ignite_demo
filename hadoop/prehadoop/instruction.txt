@@ -2,3 +2,5 @@
 - po pobraniu javy najlepiej utworzyć z nią plik archive.zip, z którego będzie instalowna przez skrypt copydebs.shs
 - wygenerowac klucze i uzupelnic id_rsa i id_rsa.pobraniu
 - demo.sh odpala demo, skrypt należy odpalić w sposób: sh demo.sh
+
+Dla kazdej serii dla kazdego palca i strony np: Seria1-first-P: [wynik]
