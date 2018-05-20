@@ -13,32 +13,30 @@ public class UserController {
 
     private static final String USER_SESSION_KEY = "loggedUser";
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public ResponseEntity<?> login(@RequestBody UserLoginViewModel user, HttpServletRequest request) {
+    @RequestMapping(value = "/login", method = RequestMethod.POST, consumes = "application/json")
+    public ResponseEntity login(@RequestBody UserLoginViewModel user, HttpServletRequest request) {
         if(isUserLoggedIn(request))
-            return ResponseEntity.ok("LoggedIn from session");
+            return ResponseEntity.ok(true);
 
         request.getSession().setAttribute(USER_SESSION_KEY, user.getUserName());
-        return ResponseEntity.ok("LoggedIn and saved session");
-
+        return ResponseEntity.ok(true);
 
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public ResponseEntity<?> testLogin(HttpServletRequest request) {
+    public ResponseEntity<?> checkLogin(HttpServletRequest request) {
         if(isUserLoggedIn(request))
-            return ResponseEntity.ok("LoggedIn from session");
+            return ResponseEntity.ok(true);
 
-        request.getSession().setAttribute(USER_SESSION_KEY, "teset");
-        return ResponseEntity.ok("Logged in and saved session");
+        return ResponseEntity.ok(false);
 
 
     }
 
-    @RequestMapping(value = "/logout", method = RequestMethod.GET)
-    public ResponseEntity<?> logout(HttpServletRequest request) {
+    @RequestMapping(value = "/logout", method = RequestMethod.POST)
+    public ResponseEntity logout(HttpServletRequest request) {
         request.getSession().removeAttribute(USER_SESSION_KEY);
-        return ResponseEntity.ok("Logout succeed");
+        return ResponseEntity.ok(true);
 
 
     }

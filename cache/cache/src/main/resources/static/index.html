@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="container-fluid center">
+    <div class="row>">
+        <div id="panelLogin">
+            <nav class="navbar navbar-default" data-bind="visible: isLoggedIn()">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="input-group">
+                                <span class="input-group-addon navInput" style="font-weight: bold;" id="basic-addon1">Hello user</span>
+                                    <span class="input-group-btn">
+                                         <button class="btn btn-info navButton"
+                                                 data-bind="click: logoutUser">Logout</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+            <form data-bind="visible: !isLoggedIn()">
+                <div class="form-group">
+                    <label for="username">UserName</label>
+                    <input type="text" class="form-control loginInput" data-bind="value: userName" id="username"
+                           placeholder="UserName">
+                    <label for="username">Password</label>
+                    <input type="password" class="form-control loginInput" data-bind="value: password" id="password"
+                           placeholder="Password">
+                </div>
+                <button type="button" class="btn btn-info loginButton" data-bind="click: loginUser">LogIn</button>
+            </form>
+            <div id="panelDashboard" data-bind="visible: isLoggedIn()">
+                <div class="row">
+                    <div class="col-sm-6">
+                        ZALOGOWANY
+                    </div>
+                    <div class="col-sm-6">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<script src="js/jquery-1.12.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src='js/knockout-3.4.0.js'></script>
+<script src="js/UserViewModel.js"></script>
+
+</body>
+</html>

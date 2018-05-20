@@ -1,0 +1,17 @@
+.loginInput, .loginButton{
+    width:200px;
+    margin-bottom: 5px;
+}
+
+.center {
+    text-align:center;
+}
+
+.center form {
+    display:inline-block;
+    margin-top: 10%;
+}
+
+.navButton, .navInput{
+    margin-top: 5px;
+}
