@@ -31,3 +31,5 @@ hadoop/hadoop/mapreduce/\.idea/artifacts/
 hadoop/hadoop/mapreduce/output/
 
 hadoop/hadoop/mapreduce/\.idea/
+
+cache/cache/src/main/java/META-INF/MANIFEST\.MF
