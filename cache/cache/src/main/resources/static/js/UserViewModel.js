@@ -5,6 +5,10 @@ var logoutUrl = function () {
     return "/api/user/logout"
 };
 
+var getDataUrl = function() {
+    return "http://192.168.5.11:50075/webhdfs/v1/user/vagrant/output/part-r-00000?op=OPEN&user.name=vagrant&namenoderpcaddress=hadoop-master:8020&offset=0";
+};
+
 
 function UserViewModel() {
     var self = this;
@@ -12,6 +16,7 @@ function UserViewModel() {
     self.userName = ko.observable();
     self.password = ko.observable();
     self.isLoggedIn = ko.observable(false);
+    self.data = ko.observable("");
 
 
     self.loginUser = function () {
@@ -46,8 +51,15 @@ function UserViewModel() {
         });
     };
 
+    self.getData = function() {
+        $.get(getDataUrl(), function (data) {
+            self.data(data);
+        });
+    };
+
     self.init = function () {
         self.checkIfLogged();
+        self.getData();
     };
 
     self.init();
